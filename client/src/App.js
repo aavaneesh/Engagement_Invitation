@@ -1,8 +1,14 @@
 import './App.css';
 
+import Hero from './components/Hero';
+
 function App() {
   return (
-    <p>HELLO WORLD!</p>
+    <div>
+
+      <Hero />
+      {/* Add other sections like Photos, RSVP etc. */}
+    </div>
   );
 }
 
