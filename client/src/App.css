@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Raleway|Rouge+Script");
 .App {
   text-align: center;
 }
@@ -59,6 +60,14 @@
   padding: 0;
   font-family: 'Sofia Sans Condensed', sans-serif;
   color: white;
+  /* === EDITED PROPERTIES FOR VERTICAL POSITIONING === */
+  position: absolute; /* Use 'fixed' if you want it to stick to the screen on scroll */
+  top: 70%; /* This moves the top edge of the timer to 60% down from its positioned parent/viewport */
+
+  /* To horizontally center the whole timer (recommended) */
+  left: 50%;
+  transform: translateX(-50%); /* This shifts it back by half its own width to truly center it */
+  /* ================================================= */
 }
 
 .countdown-timer li:not(.separator) {
@@ -191,3 +200,58 @@
     font-size: 0.7rem;
   }
 }
+
+/* Content in the HERO section */
+/* White text will pop on a dark background */
+
+.invitation-text-wrapper {
+  /* Add this property */
+  position: absolute; /* or position: fixed; depending on desired behavior */
+  top: 55%;
+  left: 50%;
+  /* Add this for perfect centering based on the element's own size */
+  transform: translate(-50%, -50%);
+  /* Optional: width, max-width, or text-align if needed for content */
+  width: 90%; /* Example: limit its width */
+  max-width: 600px; /* Example: ensure it doesn't get too wide on large screens */
+  text-align: center; /* Ensure text within is centered */
+}
+
+.invitation-title {
+ 
+  font-weight: 700;
+  font-size: 4rem;
+  color: goldenrod;
+  font-family:'Rouge Script', sans-serif;
+  text-align: center;
+  line-height: 0.5;
+}
+
+.invitation-subtitle {
+  font-family: 'Rouge Script', sans-serif;
+  font-weight: 700;
+  font-size: 3.2rem;
+  color: goldenrod;
+  text-align: center;
+  margin-top: -20px;
+}
+
+
+.invitation-names {
+  color: white;
+  font-size: 36px;
+  font-family: 'Rouge Script', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  margin-top: -10px;
+}
+
+.invitation-tagline {
+  color: goldenrod;
+  font-size: 20px;
+  font-family: 'Lora', serif;
+  font-style: italic;
+  text-align: center;
+  margin-top: 10px;
+}
+

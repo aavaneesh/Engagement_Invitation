@@ -40,15 +40,12 @@ const Hero = () => {
     <>
 
       <section id="hero" className="hero">
-        <nav className="navbar">
-        <ul>
-          <li><Link to="home" smooth={true} duration={500}>Home</Link></li>
-          <li><Link to="photos" smooth={true} duration={500}>Photos</Link></li>
-          <li><Link to="rsvp" smooth={true} duration={500}>RSVP</Link></li>
-        </ul>
-      </nav>
-        <h1>You're Invited to</h1>
-        <h2>Our Engagement!</h2>
+        <div className = "invitation-text-wrapper">
+            <h1 class="invitation-title">You're Invited to</h1>
+            <h2 class="invitation-subtitle">Our Engagement!</h2>
+            <p class="invitation-names">Sreeram & Chitrakshi</p>
+            <p class="invitation-tagline">Join us as we celebrate the beginning of forever.</p>
+        </div>
         <div>
           <ul className="countdown-timer">
             <li>
