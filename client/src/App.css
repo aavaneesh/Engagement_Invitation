@@ -60,14 +60,10 @@
   padding: 0;
   font-family: 'Sofia Sans Condensed', sans-serif;
   color: white;
-  /* === EDITED PROPERTIES FOR VERTICAL POSITIONING === */
-  position: absolute; /* Use 'fixed' if you want it to stick to the screen on scroll */
-  top: 70%; /* This moves the top edge of the timer to 60% down from its positioned parent/viewport */
-
-  /* To horizontally center the whole timer (recommended) */
+  position: absolute;
+  top: 70%;
   left: 50%;
-  transform: translateX(-50%); /* This shifts it back by half its own width to truly center it */
-  /* ================================================= */
+  transform: translateX(-50%);
 }
 
 .countdown-timer li:not(.separator) {
@@ -105,12 +101,10 @@
   .countdown-timer span {
     font-size: 2rem;
   }
-  
   .countdown-timer p {
     font-size: 0.9rem;
     bottom: -1.2rem;
   }
-  
   .separator {
     font-size: 1.5rem;
     padding-top: 0.8rem;
@@ -121,38 +115,35 @@
   .countdown-timer span {
     font-size: 1.75rem;
   }
-  
   .countdown-timer p {
     font-size: 0.8rem;
     bottom: -1rem;
   }
-  
   .separator {
     font-size: 1.25rem;
     padding-top: 0.6rem;
   }
 }
 
+/* ===== UPDATED 480px BREAKPOINT ===== */
 @media screen and (max-width: 480px) {
   .countdown-timer {
-    flex-wrap: wrap;
-    justify-content: center;
+    /* don’t wrap; keep all items on one line */
+    flex-wrap: nowrap;
   }
-  
   .countdown-timer li:not(.separator) {
+    /* allow them to shrink below their previous min-width */
+    flex: 1 1 0;
     margin: 0 0.3rem;
-    min-width: 60px;
+    min-width: initial;  /* remove the old min-width constraint */
   }
-  
   .countdown-timer span {
     font-size: 1.5rem;
   }
-  
   .countdown-timer p {
     font-size: 0.7rem;
     bottom: -0.8rem;
   }
-  
   .separator {
     font-size: 1rem;
     padding-top: 0.4rem;
@@ -163,18 +154,16 @@
 @media screen and (max-width: 360px) {
   .countdown-timer li:not(.separator) {
     margin: 0 0.2rem;
-    min-width: 50px;
+    /* still no hard minimum width */
+    min-width: initial;
   }
-  
   .countdown-timer span {
     font-size: 1.25rem;
   }
-  
   .countdown-timer p {
     font-size: 0.6rem;
     bottom: -0.7rem;
   }
-  
   .separator {
     font-size: 0.8rem;
     padding-top: 0.3rem;
@@ -184,18 +173,15 @@
 @media screen and (max-width: 320px) {
   .countdown-timer li:not(.separator) {
     margin: 0 0.1rem;
-    min-width: 45px;
+    min-width: initial;
   }
-  
   .countdown-timer span {
     font-size: 1.1rem;
   }
-  
   .countdown-timer p {
     font-size: 0.55rem;
     bottom: -0.6rem;
   }
-  
   .separator {
     font-size: 0.7rem;
   }
@@ -274,3 +260,6 @@
      1px  1px 0 black;
 }
 
+/* Ending the CSS for HERO Banner */
+
+/* Starting the CSS for Nav */
